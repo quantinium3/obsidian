@@ -1,4 +1,4 @@
-**REDIS** stands for remote dictionary server. It uses the same data data structures as a normal programming languages to create a streamlined process for storing data.
+i**REDIS** stands for remote dictionary server. It uses the same data data structures as a normal programming languages to create a streamlined process for storing data.
 
 ## Understanding Data Types
 

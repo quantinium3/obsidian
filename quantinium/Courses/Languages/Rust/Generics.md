@@ -87,3 +87,44 @@ fn main() {
     println!("p.x = {}", p.x());
 }
 ```
+
+### Trait Bounds
+To restrict generics to types that implement specific behavior, you can use trait bounds.
+```rust
+fn largest<T: PartialOrd>(list: &[T]) -> &T {
+    let mut largest = &list[0];
+    for item in list {
+        if item > largest {
+            largest = item;
+        }
+    }
+    largest
+}
+```
+- T: PartialOrd ensures that T implements the PartialOrd trait, allowing comparison.
+
+We can also use multiple trait bounds with the + syntax:
+```rust
+fn print_and_return<T: PartialOrd + std::fmt::Display>(value: T) -> T {
+    println!("Value: {}", value);
+    value
+}
+```
+
+### Where Clause
+```rust
+fn some_function<T, U>(t: T, u: U) -> i32
+where
+    T: std::fmt::Display + Clone,
+    U: Clone + std::fmt::Debug,
+{
+    println!("T: {}", t);
+    println!("U: {:?}", u);
+    42
+}
+```
+
+Rust’s generics are zero-cost abstractions. The compiler generates specialized code for each concrete type used with generics, ensuring no runtime overhead.
+
+For example, if you use `Point<i32>` and `Point<f64>`, the compiler generates two separate versions of the `Point` struct and its methods, optimized for `i32` and `f64`.
+

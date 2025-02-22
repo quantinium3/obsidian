@@ -5,7 +5,7 @@ tags: []
 title: OSI Model
 ---
 
-# **OSI Model (Open Systems Interconnection Model) – Detailed Explanation**  
+# **OSI Model (Open Systems Interconnection Model)**  
 
 The **OSI Model** is a **conceptual framework** used to understand how data flows in a network. It was developed by the **International Organization for Standardization (ISO)** to standardize network communication.  
 

@@ -12,6 +12,3 @@ title: intro
 - It is a garbage collected language meaning manual memory allocations are unneeded and garbage collector is responsible for reclaiming space from objects that are not longer in use.
 - Java bytecode is independant of hardware architecture, relying on the JVM to handle platform-specific details.
 - It has a rich standard library.
-
-
-

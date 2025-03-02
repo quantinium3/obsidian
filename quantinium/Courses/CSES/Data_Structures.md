@@ -7,7 +7,7 @@ title: Data Structures
 
 ## Dynamic Arrays
 An array whose size can be changed automatically during runtime.
-```c++
+```cpp
 vector<int> vec;
 vec.push_back(5);
 vec.push_back(7);
@@ -42,7 +42,7 @@ vector<int> vec(10, 5);
 ## Strings
 A dynamic arrays like vector but only contains chars.
 
-```c++
+```cpp
 string a = "abcde";
 string b = a + a;
 cout << b << endl; // abcdeabcde
@@ -59,7 +59,7 @@ C++ has two set implementations:
 - `set` - based on a binary tree and its operations work in O(logN) time.
 - `unordered_set` - uses hashing and its operation take O(1) on average.
 
-```c++
+```cpp
 set<int> s;
 s.insert(3);
 s.insert(2);
@@ -76,7 +76,7 @@ cout << s.count(4) << endl; // 1
 
 a set can be used like a vector but cant use the indexes to get the values.
 
-```c++
+```cpp
 set<int> s = {2, 5, 6, 8};
 cout << s.size() << endl; // 4
 
@@ -87,7 +87,7 @@ for(const int& i : s) {
 
 c++ also contains `multiset` and `unordered_multiset` that otherwise work like `set` and `unordered_set` but they can contain multiple instances of an element.
 
-```c++
+```cpp
 multiset<int> m;
 m.insert(5);
 m.insert(5);
@@ -105,7 +105,7 @@ cout << m.count(5) << endl; // 2
 ## Map
 A generalized array of key-value pairs. The structure map is based on balanced binary tree and accessing element takes O(logN) time, while the `unordered_map` uses hashing and accessing elements take O(1) time.
 
-```c++
+```cpp
 map<string, int> m;
 m['monkey'] = 4;
 m['banana'] = 3;
@@ -118,12 +118,12 @@ for(const auto& i: m) {
 ```
 
 if the `key-value` pair are not present in the map but they are requested, the `key-value` pair is put into the map with value = 0;
-```c++
+```cpp
 cout << m['hi'] << endl;
 ```
 
 To check if a key exists in a map: 
-```c++
+```cpp
 if(m.count("hi")) {
     // key exists
 }
@@ -131,7 +131,7 @@ if(m.count("hi")) {
 
 ## Bitset
 An array whose value is either 0 or 1.
-```c++
+```cpp
 bitset<10> s;
 
 s[1] = 1;
@@ -148,7 +148,7 @@ cout << s[5] << endl; // 0
 
 they are good cause we can to bitwise operations on them.
 
-```c++
+```cpp
 bitset<10> a(string("0010110110"))
 bitset<10> b(string("1011011000"))
 
@@ -160,7 +160,7 @@ cout << (a ^ b) << endl;
 ## Deque
 A queue like data structure where we can insert and pop from both ends.
 
-```c++
+```cpp
 deque<int> d;
 d.push_back(5);
 d.push_back(2);
@@ -175,7 +175,7 @@ deque is slower than a vector but still pushing and popping are O(1) operations.
 ## Stack
 A LIFO data structure that has two O(1) operations: pushing on top of stack and popping of the stack.
 
-```c++
+```cpp
 stack<int> s;
 s.push(3);
 s.push(2);
@@ -189,7 +189,7 @@ cout << s.top() << endl;
 ## Queue
 A FIFO based data structure which also has two O(1) operations: pushing at end of queue and popping from front of queue.
 
-```c++
+```cpp
 queue<int> q;
 q.push(3);
 q.push(2);
@@ -202,7 +202,7 @@ cout << q.front() << endl; // 2
 
 ## Priority queue
 A heap based data structure.
-```c++
+```cpp
 priority_queue<int> q; // max heap
 q.push(3);
 q.push(5);
@@ -219,7 +219,7 @@ priority_queue<int, vector<int> , greater<int>> q; // min heap
 
 ## Policy based data structures
 g++ also contains some data structures that are not part of c++ std library.
-```c++
+```cpp
 #include <ext/pb_ds/assoc_container.hpp>
 using namespace __gnu_pbds;
 
@@ -236,7 +236,7 @@ cout << s.order_of_key(7) << "\n"; // 2
 ```
 
 If the element does not appear in the set, we get the position that the element would have in the set
-```c++
+```cpp
 cout << s.order_of_key(6) << "\n"; // 2
 cout << s.order_of_key(8) << "\n"; // 3
 ```

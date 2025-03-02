@@ -12,7 +12,7 @@ its fine if the input is small but would give tle or mle if the input is large.
 ## Generating subsets
 
 ### Using recursive backtracking
-```c++
+```cpp
 vector<int> subset;
 int n = 3;
 
@@ -35,7 +35,7 @@ int main() {
 ```
 
 ### Using bitset
-```c++
+```cpp
 vector<vector<int>> genSet(vector<int>& nums) {
     int n = nums.size();
     int totalSubsets = 1 << n;
@@ -64,7 +64,7 @@ vector<vector<int>> genSet(vector<int>& nums) {
 ## Generating Permutations
 ### Using `next_permutation`
 c++ std library contains a function `next_permutation` that can be used for this
-```c++
+```cpp
 vector<int> perm = {1, 2, 3};
 do {
     // process
@@ -72,7 +72,7 @@ do {
 ```
 
 ### Using recursive backtracking
-```c++
+```cpp
 void backtrack(vector<int>& nums, int start, vector<vector<int>>& result) {
     if (start == nums.size()) {
         result.push_back(nums); // Store a valid permutation

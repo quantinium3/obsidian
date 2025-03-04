@@ -127,21 +127,3 @@ public class Main {
 ```
 - `weakRef` doesn’t prevent GC; the object can be collected if no strong references exist.
 
----
-
-### Real-World Analogy
-Think of GC as a janitor in a busy office:
-- You (the program) create trash (objects) by working.
-- The janitor (GC) periodically checks which desks (roots) still have stuff pointing to trash.
-- Trash no one’s using gets tossed out, and the space is cleaned up for reuse.
-
----
-
-### Key Takeaways
-- **Garbage**: Unreachable objects with no active references.
-- **Collection**: Automatic process to mark and sweep these objects.
-- **Java’s GC**: Runs in the JVM, generational, and efficient for most cases.
-- **No control**: Happens when the JVM decides, but you can hint or tune it.
-
-If you want to dig into GC in another language (e.g., C#) or explore specific JVM implementations (like G1 GC), let me know! What’s sparking your curiosity next?
-

@@ -27,108 +27,81 @@ It consists of **seven layers**, each with specific functions. These layers work
 ---
 
 ## **Physical Layer (Layer 1)**
-    - **Function**:  
     - Handles the **physical connection** between devices.  
     - Converts data into electrical, optical, or radio signals for transmission.  
+    - When you connect a LAN cable to a router, the **Physical Layer** ensures that bits are transmitted correctly.  
 
 - **Key Components**:  
     - **Cables** (Ethernet, fiber optics).  
     - **Wireless signals** (Wi-Fi, Bluetooth).  
     - **Network adapters and hubs**.  
 
-- **Example**:  
-    - When you connect a LAN cable to a router, the **Physical Layer** ensures that bits are transmitted correctly.  
-
 ---
 
 ## **Data Link Layer (Layer 2)**
-- **Function**:  
     - **Formats data into frames** for transmission.  
     - Adds **MAC addresses** (physical addresses of network devices).  
-- Detects and corrects errors in data transmission.  
+    - Detects and corrects errors in data transmission.  
+    - **Switches, Bridges, MAC Addresses**.  
+    - When a switch directs network traffic **based on MAC addresses**, it works at the **Data Link Layer**.  
 
 - **Divided into Two Sublayers**:  
     1. **LLC (Logical Link Control)** – Error checking & flow control.  
     2. **MAC (Media Access Control)** – Defines access to the physical network.  
 
-- **Key Components**:  
-    - **Switches, Bridges, MAC Addresses**.  
-
-- **Example**:  
-    - When a switch directs network traffic **based on MAC addresses**, it works at the **Data Link Layer**.  
-
 ---
 
 ## **Network Layer (Layer 3)**
-- **Function**:  
     - **Routes data** between different networks using **IP addresses**.  
     - Determines the **best path** for data packets.  
-
-- **Key Components**:  
     - **Routers, IP Addresses (IPv4/IPv6), ARP, ICMP**.  
-
-- **Example**:  
     - When you visit a website, your computer contacts a router, which uses **IP addresses** to find the destination server.  
 
 ---
 
 ## **Transport Layer (Layer 4)**
-- **Function**:  
     - Ensures **end-to-end delivery** of data between devices.  
     - Handles **error correction, segmentation, and reassembly**.  
     - Uses **TCP (reliable) and UDP (fast but unreliable)**.  
+    - **Streaming a video** uses **UDP** for speed, while **downloading a file** uses **TCP** for reliability.  
 
 - **Key Protocols**:  
     - **TCP (Transmission Control Protocol)** – Ensures reliable delivery, error checking, and acknowledgment.  
     - **UDP (User Datagram Protocol)** – Faster but doesn’t guarantee delivery.  
 
-- **Example**:  
-    - **Streaming a video** uses **UDP** for speed, while **downloading a file** uses **TCP** for reliability.  
-
 ---
 
 ## **Session Layer (Layer 5)**
-- **Function**:  
     - **Establishes, maintains, and terminates** communication sessions.  
     - Manages sessions between applications.  
+    - A **Skype call** maintains a session so both users can communicate.  
 
 - **Key Responsibilities**:  
     - **Session establishment** (e.g., logging into a remote server).  
     - **Session synchronization** (e.g., saving a paused video call).  
 
-- **Example**:  
-    - A **Skype call** maintains a session so both users can communicate.  
-
 ---
 
 ## **Presentation Layer (Layer 6)**
-- **Function**:  
     - **Translates data** into a format the application can understand.  
     - Handles **encryption, decryption, compression, and encoding**.  
-
-- **Key Responsibilities**:  
     - **Data format conversion** (e.g., converting text to ASCII).  
     - **Encryption and decryption** (e.g., SSL/TLS for secure browsing).  
     - **Compression** (e.g., reducing image file size).  
-
-- **Example**:  
     - When you **stream a video**, compression (e.g., MP4) is used to reduce file size.  
 
 ---
 
 ## **Application Layer (Layer 7)**
-- **Function**:  
     - Directly interacts with **user applications**.  
     - Provides **network services** like file transfers, web browsing, and email.  
+    - When you type **"www.google.com"**, the **DNS** resolves the domain to an IP address.  
 
 - **Key Protocols**:  
     - **HTTP/HTTPS** (Web browsing).  
     - **FTP** (File transfers).  
     - **SMTP/POP3/IMAP** (Email communication).  
     - **DNS** (Domain name resolution).  
-
-- **Example**:  
-    - When you type **"www.google.com"**, the **DNS** resolves the domain to an IP address.  
 
 ---
 

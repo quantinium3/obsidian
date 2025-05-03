@@ -103,5 +103,3 @@ Sometimes considered part of the access layer, this is where insights are delive
 - **Structure**: Dimensional models make it easy to feed data into algorithms (e.g., clustering sales by customer segments).
 - **Performance**: Fast query execution supports iterative mining tasks.
 - **Consistency**: Integrated, clean data ensures reliable patterns, not garbage-in-garbage-out.
-
-

@@ -1,3 +1,9 @@
+---
+id: OLAP
+aliases: []
+tags: []
+---
+
 ## OLAP Servers
 An OLAP server sits between the data warehouse (where data is stored) and the end-user tools (like dashboards or data mining software). Its job is to process multidimensional queries—like “What were total sales by product category across all regions in Q3?”—quickly and efficiently. Unlike traditional databases (OLTP systems) optimized for transactional updates (e.g., recording a sale), OLAP servers are tuned for reading and aggregating historical data.
 
@@ -21,9 +27,9 @@ In a data warehouse architecture (like the ones we discussed), the OLAP server l
 OLAP servers come in different flavors, depending on how they store and process data. Here are the main types:
 
 #### 1. MOLAP (Multidimensional OLAP)
-- **How It Works**: Stores data in a multidimensional cube structure, precomputed and optimized for analysis.
-- **Storage**: Data is physically stored as cubes, separate from the relational warehouse.
-- **Example**: A cube with axes for `Time`, `Product`, and `Region`, holding pre-aggregated sales totals.
+- Stores data in a multidimensional cube structure, precomputed and optimized for analysis.
+- Data is physically stored as cubes, separate from the relational warehouse.
+- A cube with axes for `Time`, `Product`, and `Region`, holding pre-aggregated sales totals.
 - **Pros**:
   - Lightning-fast queries due to precomputed aggregates.
   - Ideal for complex, multidimensional analysis.
@@ -34,8 +40,8 @@ OLAP servers come in different flavors, depending on how they store and process 
 - **Use Case**: Analyzing sales trends across fixed dimensions with predictable query patterns.
 
 #### 2. ROLAP (Relational OLAP)
-- **How It Works**: Works directly on relational data in the warehouse (e.g., star schemas), translating OLAP queries into SQL.
-- **Storage**: No separate cube—uses the warehouse’s relational tables (fact and dimension tables).
+- Works directly on relational data in the warehouse (e.g., star schemas), translating OLAP queries into SQL.
+- No separate cube—uses the warehouse’s relational tables (fact and dimension tables).
 - **Example**: A query like “Sum sales by region” runs SQL against a star schema’s `Fact_Sales` and `Dim_Region`.
 - **Pros**:
   - Scales well with large datasets—no cube size limits.
@@ -47,9 +53,9 @@ OLAP servers come in different flavors, depending on how they store and process 
 - **Use Case**: Ad-hoc queries on massive, dynamic datasets where precomputing isn’t practical.
 
 #### 3. HOLAP (Hybrid OLAP)
-- **How It Works**: Combines MOLAP and ROLAP—stores some data in cubes (for speed) and leaves detailed data in the relational database (for scale).
-- **Storage**: Aggregates in cubes, raw data in tables.
-- **Example**: High-level summaries (e.g., yearly sales) in a cube, drill-down details (e.g., daily transactions) fetched via SQL.
+- Combines MOLAP and ROLAP—stores some data in cubes (for speed) and leaves detailed data in the relational database (for scale).
+- Aggregates in cubes, raw data in tables.
+- High-level summaries (e.g., yearly sales) in a cube, drill-down details (e.g., daily transactions) fetched via SQL.
 - **Pros**:
   - Balances speed and scalability.
   - Flexible for varied workloads.
@@ -60,8 +66,8 @@ OLAP servers come in different flavors, depending on how they store and process 
 - **Use Case**: Mixed needs—fast dashboards plus deep, detailed analysis.
 
 #### 4. DOLAP (Desktop OLAP) – Less Common
-- **How It Works**: Lightweight OLAP on a user’s local machine, often with a small data subset downloaded from the warehouse.
-- **Pros**: Portable, good for offline analysis.
+- Lightweight OLAP on a user’s local machine, often with a small data subset downloaded from the warehouse.
+- Portable, good for offline analysis.
 - **Cons**: Limited by local resources, not suited for big data.
 - **Tools**: Early tools like Cognos PowerPlay.
 
@@ -110,11 +116,3 @@ These are the analytical actions OLAP servers excel at, which also feed into dat
 - **Multidimensionality**: Supports mining across dimensions (e.g., “Find patterns in sales by region and time”).
 - **Speed**: Quick data access lets miners iterate faster, refining models or hypotheses.
 - **Exploration**: OLAP’s interactivity helps identify areas worth mining before running heavy algorithms.
-
----
-
-### Examples in Practice
-- **Retail**: A MOLAP server with a sales cube lets analysts drill into holiday sales patterns, feeding results to a mining tool predicting future demand.
-- **Finance**: A ROLAP server queries a warehouse to analyze transaction risks across accounts, supporting fraud detection models.
-- **Healthcare**: A HOLAP server balances aggregated patient stats (in cubes) with detailed records (in tables) for mining treatment outcomes.
-

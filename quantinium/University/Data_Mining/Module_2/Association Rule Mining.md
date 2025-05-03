@@ -1,3 +1,10 @@
+---
+id: Association Rule Mining
+aliases: []
+tags: []
+title: Association Rule Mining
+---
+
 ### Support and Confidence in Association Rule Mining
 Association rule mining finds relationships like "If A, then B" (written as A → B) in transactional datasets.
 

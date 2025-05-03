@@ -1,3 +1,9 @@
+---
+id: Cluster Analysis
+aliases: []
+tags: []
+---
+
 Cluster analysis groups data points into clusters where objects within a cluster are more similar to each other than to those in other clusters. It’s unsupervised—no predefined labels, just patterns in the data.
 ### 1. Types of Data in Cluster Analysis
 The type of data dictates how clustering is performed and which measures or methods work best. Here are the main categories:
@@ -123,4 +129,4 @@ Partitioning methods divide data into \( k \) non-overlapping clusters. You spec
 ### Choosing the Right Approach
 - **Data Type**: Numerical → K-Means; Categorical → K-Modes; Mixed → Gower’s + K-Medoids.
 - **Scale**: Small → K-Means/K-Medoids; Large → CLARA.
-- **Shape**: Spherical clusters → K-Means; Arbitrary → K-Medoids.
+- **Shape**: Spherical idclusters → K-Means; Arbitrary → K-Medoids.

@@ -1,3 +1,10 @@
+---
+id: Sequential Pattern mining
+aliases: []
+tags: []
+title: Sequential Pattern mining
+---
+
 Sequential pattern mining finds frequent subsequences in a dataset of sequences. A sequence is an ordered list of events or itemsets, often tied to time or position.
 - **Example**: In a customer shopping dataset:
   - Sequence: <{milk}, {bread}, {butter}> means a customer bought milk, then bread, then butter over time.

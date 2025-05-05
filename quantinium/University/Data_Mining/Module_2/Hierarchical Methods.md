@@ -104,13 +104,3 @@ Identifies data points that deviate significantly from the majority.
 | DBSCAN                   | Density-based clusters                   | Handles noise, arbitrary shapes   | Sensitive to parameters          |
 | Clustering with Constraints | Uses ML/CL constraints                | Incorporates domain knowledge     | Constraints may be hard to define |
 | Outlier Detection (LOF)  | Density deviation                        | Works for local outliers          | Computationally heavy            |
-
----
-
-### **Exam Tips**
-- **Hierarchical**: Focus on dendrogram interpretation and linkage methods.
-- **DBSCAN**: Understand core/border/noise points and parameter impact.
-- **Constraints**: Know how ML/CL affect clustering.
-- **Outliers**: Compare statistical vs. density-based methods.
-
-Good luck with your exams! 🚀
